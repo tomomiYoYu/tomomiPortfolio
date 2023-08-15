@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>コーポレートサイト</title>
+    <meta
+      name="description"
+      content="ページを100文字程度の文章で表した「概要を」記述します。メタディスクリプションに記述した内容が、検索結果のタイトルやSNSでシェアの下にページの概要説明として表示されます。"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="css/chartist.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d48eed0ec0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="l-header">
+      <a href="index.html" class="l-header__logo">Corporate Site </a>
+      <nav>
+        <ul class="l-header__nav">
+          <li class="l-header__item">
+            <a class="l-header__link _home" href="index.html">ホーム</a>
+          </li>
+          <li class="l-header__item">
+            <a class="l-header__link _recruit" href="job.html">募集要項</a>
+          </li>
+          <li class="l-header__item _current">
+            <a class="l-header__link _hiring" href="#">応募</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="l-main-job">
+      <div class="l-main-job__inner">
+        <h1 class="e-title03">
+          <span class="e-title03__text">応募フォーム</span>
+        </h1>
+        <p class="e-text01">
+          下記の応募フォームにすべてご記入の上、送信してください。
+        </p>
+        <p class="e-text01-small">
+          ※ファイルの添付はできません。作品のファイルがある場合は必ずアップロードしたURLをご記入ください。
+        </p>
+        <form class="c-form">
+          <div class="c-form__inner">
+            <label for="name" class="c-form__title">お名前</label>
+            <input
+              type="text"
+              placeholder="例：大本真奈美"
+              id="name"
+              class="c-form__input"
+            />
+          </div>
+          <div class="c-form__inner">
+            <label for="katakana" class="c-form__title">フリガナ</label>
+            <input
+              type="text"
+              placeholder="例：オオモトマナミ"
+              id="katakana"
+              class="c-form__input"
+            />
+          </div>
+          <div class="c-form__inner">
+            <label for="mail" class="c-form__title">メールアドレス</label>
+            <input
+              type="email"
+              placeholder="例：hello@example.com"
+              id="mail"
+              class="c-form__input"
+            />
+          </div>
+          <div class="c-form__inner">
+            <label for="link" class="c-form__title">ポートフォリオ</label>
+            <input
+              type="url"
+              placeholder="例：http://example.com"
+              id="link"
+              class="c-form__input"
+            />
+          </div>
+          <div class="c-form__inner">
+            <fieldset>
+              <legend class="c-form__title float-left">希望勤務地</legend>
+              <div class="c-form_labelWrap float-right">
+                <label class="c-form__label" for="tokyo"
+                  ><input
+                    type="checkbox"
+                    id="tokyo"
+                    name="check"
+                    class="c-form__check"
+                  /><span> 東京</span></label
+                ><label class="c-form__label" for="oosaka">
+                  <input
+                    type="checkbox"
+                    id="oosaka"
+                    name="check"
+                    class="c-form__check"
+                  />
+                  <span>大阪</span></label
+                ><label class="c-form__label" for="remote"
+                  ><input
+                    type="checkbox"
+                    id="remote"
+                    name="check"
+                    class="c-form__check"
+                  /><span> リモート勤務</span></label
+                >
+              </div>
+            </fieldset>
+          </div>
+          <div class="c-form__inner">
+            <label for="status" class="c-form__title">現在の状態</label>
+            <div class="c-form__box">
+              <select id="status">
+                <option value="会社に在籍中">会社に在籍中</option>
+                <option value="フリーランス">フリーランス</option>
+                <option value="休職中">休職中</option>
+              </select>
+            </div>
+          </div>
+          <div class="c-form__inner">
+            <label for="comment" class="c-form__title">自己PR</label>
+            <textarea
+              placeholder="例：これまでの経歴、学んできたこと、今取り組んでいるプロジェクト等"
+              class="c-form__input"
+              id="comment"
+              rows="9"
+            ></textarea>
+          </div>
+          <div class="c-form__btnWrap">
+            <button class="c-form__btn">送信する</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer class="l-footer">
+      <ul class="l-footer__nav">
+        <li class="l-footer__list"><a href="">会社概要</a></li>
+        <li class="l-footer__list"><a href="">サービス内容</a></li>
+        <li class="l-footer__list"><a href="">スタッフブログ</a></li>
+        <li class="l-footer__list"><a href="">お問い合わせ</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>

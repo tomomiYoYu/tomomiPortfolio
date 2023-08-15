@@ -1,0 +1,657 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/**
+* *******************************
+* ページ全体に関わるcssの設定
+* *******************************
+*/
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  font-size: 16px;
+}
+
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  color: #949087;
+  font-family: sans-serif;
+  background: linear-gradient(180deg, #ffb7b7 0%, #727272 100%), radial-gradient(60.91% 100% at 50% 0%, #ffd1d1 0%, #260000 100%), linear-gradient(238.72deg, #ffdddd 0%, #720066 100%), linear-gradient(127.43deg, #00ffff 0%, #ff4444 100%), radial-gradient(100.22% 100% at 70.57% 0%, #ff0000 0%, #00ffe0 100%), linear-gradient(127.43deg, #b7d500 0%, #3300ff 100%);
+  background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge, normal;
+}
+
+p {
+  line-height: 1.6;
+}
+
+input,
+button {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+}
+
+address {
+  font-style: normal;
+}
+
+.l-header {
+  margin-top: 40px;
+  margin-bottom: -1px;
+  background-image: url(../images/header.svg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 170px;
+  text-align: center;
+}
+@media (min-width: 600px) {
+  .l-header {
+    max-width: 1000px;
+    margin: 2.5rem auto -1px;
+    height: 190px;
+  }
+}
+
+.l-wrap {
+  padding: 24px;
+  background-color: #fff;
+}
+@media (min-width: 600px) {
+  .l-wrap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto 64px;
+    padding: 16px 40px 40px;
+  }
+}
+
+.l-main {
+  margin-bottom: 48px;
+}
+@media (min-width: 600px) {
+  .l-main {
+    width: 68%;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 600px) {
+  .l-aside {
+    width: 26%;
+  }
+}
+
+.l-aside__inner {
+  position: relative;
+  margin-bottom: 64px;
+  padding: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: 2px solid #ccc;
+  outline-offset: 4px;
+}
+
+.l-aside__inner:last-of-type {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  margin-bottom: 32px;
+}
+
+.l-aside__inner::before {
+  position: absolute;
+  content: "\f1b0";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  width: 2rem;
+  height: 2rem;
+  top: -16px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.l-section__inner {
+  margin-bottom: 3rem;
+}
+
+.l-footer {
+  padding: 48px;
+  background-color: #949087;
+  text-align: center;
+}
+
+.l-footer__nav {
+  margin-bottom: 32px;
+}
+
+.c-media {
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.c-media__heading {
+  padding: 0 0.5rem 0.5rem;
+  line-height: 1.5;
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.c-media__title {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.c-media__image {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.c-media__date {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  background-color: #93d8d0;
+  border-radius: 30% 60% 50% 70%/50%;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Amatic SC", cursive;
+  letter-spacing: 0.1rem;
+  line-height: 1.6;
+}
+
+.c-media__date > span:first-child {
+  font-size: 16px;
+}
+
+.c-media__date > span:nth-of-type(2n) {
+  border-top: 1px dotted #fff;
+}
+
+.c-media__img {
+  height: 240px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 40% 70% 50% 30%/50%;
+}
+@media (min-width: 600px) {
+  .c-media__img {
+    width: 220px;
+    height: 180px;
+    float: left;
+    shape-outside: circle();
+    margin-right: 5rem;
+  }
+}
+
+.c-media__body {
+  margin-bottom: 1rem;
+}
+
+.c-media__text {
+  margin-bottom: 1rem;
+}
+
+.c-media__btn {
+  margin: 1rem 0;
+  padding-right: 5px;
+  text-align: right;
+}
+
+.c-media__btn > a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #eda1a1;
+  border: 2px dashed #e38787;
+  border-radius: 5px;
+  box-shadow: 0 0 0 5px #eda1a1;
+  color: #fff;
+}
+
+.c-disc__item {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.c-disc__decoration {
+  background-color: #93d8d0;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-bottom: 3px;
+  border-radius: 50%;
+}
+
+.c-decimal {
+  counter-reset: list;
+}
+
+.c-decimal__item {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+}
+
+.c-decimal__decoration {
+  margin-bottom: 3px;
+}
+
+.c-decimal__decoration::before {
+  counter-increment: list 1;
+  content: counter(list);
+  width: 1rem;
+  height: 1rem;
+  color: #93d8d0;
+}
+
+.c-pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 24px;
+}
+
+.c-pagination__item {
+  min-width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.c-pagination__link {
+  display: block;
+}
+
+.c-pagination__link > span {
+  margin: 5px 0;
+}
+
+.c-aside__title {
+  margin: 0.875rem 0 1.125rem;
+  font-size: 1.875rem;
+  font-family: "Amatic SC", cursive;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.c-category__item {
+  padding: 16px 0;
+  border-bottom: 1px dashed #ccc;
+  display: flex;
+}
+
+.c-category__item:first-of-type {
+  padding-top: 0;
+}
+
+.c-category__item:last-of-type {
+  border-bottom: none;
+}
+
+.c-category__item::before {
+  content: "";
+  min-width: 0.5rem;
+  height: 0.5rem;
+  margin: 3px 0.5rem 0 0;
+  background-color: #93d8d0;
+  border-radius: 50%;
+}
+
+.c-news__form {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+.c-news__email {
+  width: 80%;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.c-news__email > input {
+  width: 100%;
+}
+
+.c-news__email::-moz-placeholder {
+  color: #ccc;
+}
+
+.c-news__email::placeholder {
+  color: #ccc;
+}
+
+.c-news__btn {
+  min-width: 20%;
+  padding: 1.1rem;
+  margin-left: -3rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #eda1a1;
+  color: #fff;
+}
+
+.c-footer__nav {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.c-footer__nav__item {
+  margin: 0 12px;
+}
+
+.c-footer__nav__item:hover,
+.c-footer__nav__item:focus {
+  color: #c7c3ba;
+}
+
+.c-copyright {
+  color: #c7c3ba;
+}
+
+.e-header__title01 {
+  margin: 16px 0;
+  padding-top: 32px;
+  font-weight: normal;
+  font-size: 3.75rem;
+  font-family: "Amatic SC", cursive;
+  text-transform: uppercase;
+}
+@media (min-width: 600px) {
+  .e-header__title01 {
+    margin-bottom: 32px;
+  }
+}
+
+@media (min-width: 600px) {
+  .e-header__text01 {
+    font-size: 18px;
+  }
+}
+
+.e-header__title02 {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-top: 2px dotted #ccc;
+  border-bottom: 2px dotted #ccc;
+}
+
+.e-header__text02 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.5rem;
+}
+
+.e-header__title03 {
+  margin-bottom: 1rem;
+}
+
+.e-header__text03 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+.e-header__title04 {
+  margin-bottom: 1rem;
+}
+
+.e-header__text04 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+.e-text__blockquote {
+  margin-top: 2rem;
+  position: relative;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.e-text__blockquote > blockquote {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.e-text__blockquote::before {
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  content: "\f10d";
+  color: #ccc;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.e-text__blockquote::after {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  content: "\f10e";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #ccc;
+}
+/*# sourceMappingURL=style.css.map */
